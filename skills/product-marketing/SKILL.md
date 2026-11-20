@@ -1,6 +1,6 @@
 ---
 name: product-marketing
-description: "When the user wants to create or update the product marketing context doc (.agents/product-marketing.md), or asks what belongs in it or whether positioning or ICP is clear enough: product, ICP, positioning, competitors, customer language, brand voice. Use it before other marketing skills on a new project, when the audience or positioning changes, and to log learnings."
+description: "When the user wants to create or update the product marketing context doc (~/projects/<slug>/product-marketing.md), or asks what belongs in it or whether positioning or ICP is clear enough: product, ICP, positioning, competitors, customer language, brand voice. Use it before other marketing skills on a new project, when the audience or positioning changes, and to log learnings."
 metadata:
   version: 2.2.3
 ---
@@ -9,13 +9,13 @@ metadata:
 
 You help users create and maintain a product marketing context document. This captures foundational positioning and messaging information that other marketing skills reference, so users don't repeat themselves.
 
-The document is stored at `.agents/product-marketing.md`.
+The document is stored at `~/projects/<slug>/product-marketing.md`.
 
 ## Workflow
 
 ### Step 1: Check for Existing Context
 
-First, check if `.agents/product-marketing.md` already exists. Also check `.claude/product-marketing.md` and the legacy filename `product-marketing-context.md` (in either `.agents/` or `.claude/`) for older setups — if found anywhere other than `.agents/product-marketing.md`, offer to move it to the canonical location.
+First, check if `~/projects/<slug>/product-marketing.md` already exists.
 
 **If it exists:**
 - Read it and summarize what's captured — note its current **Document version** and the last few **Changelog** entries so the user sees where the doc stands and what's changed recently
@@ -142,7 +142,7 @@ Start this empty. It fills up as work ships (see "Maintaining Learnings" below).
 
 ## Step 3: Create the Document
 
-After gathering information, create `.agents/product-marketing.md` with this structure:
+After gathering information, create `~/projects/<slug>/product-marketing.md` with this structure:
 
 ```markdown
 # Product Marketing Context
@@ -283,7 +283,7 @@ After gathering information, create `.agents/product-marketing.md` with this str
     - `- v2 (2026-06-02) — Rewrote value prop and objections after 5 customer interviews; added competitor Acme.`
   - Use today's date in ISO form (YYYY-MM-DD) for the entry and `Last updated`.
   - **Pure typo-only fix:** don't bump the version or add a changelog entry — just save the correction. Every other change bumps the version and gets an entry. When the change is a real repositioning, say so plainly — downstream skills will now generate against the new context.
-- Save to `.agents/product-marketing.md`
+- Save to `~/projects/<slug>/product-marketing.md`
 - Tell them: "Other marketing skills will now use this context automatically. The Changelog at the bottom tracks every revision — check it to see how your positioning has evolved. Run `/product-marketing` anytime to update it."
 
 ---
@@ -307,7 +307,7 @@ The Changelog records how the document changed. **Learnings** records what the t
 
 **When to retire an entry:** a later test contradicts it, the product or market changed underneath it (new pricing, new ICP), or it hasn't been relevant for two quarters. Change the status to `retired` and add a line saying why, rather than deleting it, so nobody re-tests a settled question. Move retired rows to the bottom, and archive them once the table passes about 20 active rows.
 
-**Who writes it:** any skill that finishes a test, campaign, or postmortem may propose a row. Show the proposed row to the user and add it on approval, with a version bump and a Changelog line like any other substantive change. Loops that run on a schedule do this through their session-end step (see **marketing-loops**).
+**Who writes it:** any skill that finishes a test, campaign, or postmortem may propose a row. Show the proposed row to the user and add it on approval, with a version bump and a Changelog line like any other substantive change. 
 
 ---
 

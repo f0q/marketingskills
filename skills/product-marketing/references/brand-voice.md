@@ -89,7 +89,7 @@ When drafting as a specific person (a founder's posts, an exec's emails, a CEO's
 - Templates for message types they send often
 - Things they never say
 
-Refresh it from their recent writing every quarter or so, and fold in the edits they make to your drafts. Their edits are the most accurate voice data you'll get. Store these next to the context file, for example `.agents/voice/<name>.md`.
+Refresh it from their recent writing every quarter or so, and fold in the edits they make to your drafts. Their edits are the most accurate voice data you'll get. Store these next to the context file, for example `~/projects/<slug>/voice/<name>.md`.
 
 ## How other skills apply it
 

@@ -1,6 +1,6 @@
 # Custom Advisor Template
 
-Copy this structure to add an advisor to the bench. Save custom advisors to `.agents/advisors/<kebab-name>.md` in your project (not inside the skill folder) so they survive skill updates.
+Copy this structure to add an advisor to the bench. Save custom advisors to `~/knowledge/marketing-consultant/advisors/<kebab-name>.md` (not inside the skill folder) so they survive skill updates.
 
 Two kinds of custom advisors, two grounding standards:
 
@@ -48,4 +48,4 @@ to write in their register without fabricating quotes.]
 
 ---
 
-**Seating a custom advisor:** mention them by name when convening ("seat my advisor Maria on this council"). The agent loads the file from `.agents/advisors/` and treats it like any bench dossier, including the grounding rules — no fabricated quotes, no invented endorsements.
+**Seating a custom advisor:** mention them by name when convening ("seat my advisor Maria on this council"). The agent loads the file from `~/knowledge/marketing-consultant/advisors/` and treats it like any bench dossier, including the grounding rules — no fabricated quotes, no invented endorsements.
